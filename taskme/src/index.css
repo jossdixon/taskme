@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,600;1,400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -8,7 +7,7 @@
 }
 
 body {
-  font-family: 'Mulish', sans-serif;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 .container {
