@@ -8,6 +8,12 @@
 
 body {
   font-family: 'M PLUS Rounded 1c', sans-serif;
+  background: rgb(56,145,166);
+  background: linear-gradient(90deg, rgba(56,145,166,1) 0%, rgba(227,101,91,1) 31%, rgba(219,84,97,1) 69%, rgba(253,231,76,1) 100%);
+  color:#4C5B5C;
+  height: 100vh;
+  padding:0;
+  margin:0;
 }
 
 .container {
@@ -15,9 +21,11 @@ body {
   margin: 30px auto;
   overflow: auto;
   min-height: 300px;
-  border: 1px solid steelblue;
+  border-bottom: 16px solid #4C5B5C;
+  background-color: rgb(197, 224, 226);
   padding: 30px;
-  border-radius: 5px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .header {
@@ -29,11 +37,11 @@ body {
 
 .btn {
   display: inline-block;
-  background: #000;
-  color: #fff;
+  background: #4C5B5C;
+  color: whitesmoke;
   border: none;
   padding: 10px 20px;
-  margin: 5px;
+  margin: 0px;
   border-radius: 5px;
   cursor: pointer;
   text-decoration: none;
@@ -55,20 +63,32 @@ body {
 }
 
 .task {
-  background: #f4f4f4;
-  margin: 5px;
+  background: whitesmoke;
+  color: #4C5B5C;
+  border: 2px solid #4C5B5C;
+  border-radius: 8px;
+  margin-top: 16px;
   padding: 10px 20px;
   cursor: pointer;
+  transition: 0.5s;
 }
 
-.task.reminder {
-  border-left: 5px solid green;
+.task.done {
+  background-color: #4C5B5C;
+  color: whitesmoke;
 }
 
 .task h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.task p {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
 }
 
 .add-form {
@@ -81,14 +101,24 @@ body {
 
 .form-control label {
   display: block;
+  margin-bottom: 4px;
+  color: #4C5B5C;
 }
 
 .form-control input {
   width: 100%;
   height: 40px;
-  margin: 5px;
+  margin: auto;
   padding: 3px 7px;
-  font-size: 17px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+}
+
+.form-control input:focus {
+  border: 0.5px solid #4C5B5C;
+  outline: none !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
 .form-control-check {
@@ -99,6 +129,10 @@ body {
 
 .form-control-check label {
   flex: 1;
+}
+
+input, select, textarea, button {
+  font-family: inherit;
 }
 
 .form-control-check input {

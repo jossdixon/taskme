@@ -1,51 +1,51 @@
 import { useState } from 'react'
 
 const AddTask = ({ onAdd }) => {
-  const [text, setText] = useState('')
-  const [day, setDay] = useState('')
-  const [reminder, setReminder] = useState(false)
+  const [title, setTitle] = useState('')
+  const [comment, setComment] = useState('')
+  const [done, setDone] = useState(false)
 
   const onSubmit = (e) => {
     e.preventDefault()
 
-    if(!text) {
+    if(!title) {
       alert('Please add a task')
       return
     }
 
-    onAdd({ text, day, reminder })
+    onAdd({ title, comment, done })
 
-    setText('')
-    setDay('')
-    setReminder(false)
+    setTitle('')
+    setComment('')
+    setDone(false)
   }
 
   return (
     <form className='add-form' onSubmit={onSubmit} >
       <div className='form-control'>
-      <label>Task?</label>
+      <label>What do you need to do today?</label>
       <input
         type='text'
-        placeholder='Add Task'
-        value={text}
-        onChange={(e) => setText(e.target.value)} />
+        placeholder='e.g. Phone a friend'
+        value={title}
+        onChange={(e) => setTitle(e.target.value)} />
       </div>
       <div className='form-control'>
-        <label>When?</label>
+        <label>Add a comment...</label>
         <input
         type='text'
-        placeholder='Add Time'
-        value={day}
-        onChange={(e) => setDay(e.target.value)} />
+        placeholder='e.g. At 2pm'
+        value={comment}
+        onChange={(e) => setComment(e.target.value)} />
       </div>
-      <div className='form-control form-control-check'>
+      {/* <div className='form-control form-control-check'>
         <label>Reminder?</label>
         <input
         type='checkbox'
         value={reminder}
         checked={reminder}
         onChange={(e) => setReminder(e.currentTarget.checked)}  />
-      </div>
+      </div> */}
       <input className='btn btn-block' type='submit' value='Save Task' />
     </form>
 
