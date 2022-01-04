@@ -7,6 +7,17 @@ const AddTask = ({ onAdd }) => {
 
   const onSubmit = (e) => {
     e.preventDefault()
+
+    if(!text) {
+      alert('Please add a task')
+      return
+    }
+
+    onAdd({ text, day, reminder })
+
+    setText('')
+    setDay('')
+    setReminder(false)
   }
 
   return (
@@ -32,6 +43,7 @@ const AddTask = ({ onAdd }) => {
         <input
         type='checkbox'
         value={reminder}
+        checked={reminder}
         onChange={(e) => setReminder(e.currentTarget.checked)}  />
       </div>
       <input className='btn btn-block' type='submit' value='Save Task' />
