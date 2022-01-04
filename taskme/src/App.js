@@ -8,22 +8,10 @@ const App = () => {
   const [tasks, setTasks] = useState([
     {
       id: 1,
-      text: 'Tennis',
-      day: 'January 5th at 10:00',
-      reminder: false,
-    },
-    {
-      id: 2,
-      text: 'Dentist',
-      day: 'January 7th at 14:30',
-      reminder: true,
-    },
-    {
-      id: 3,
-      text: 'Interview',
-      day: 'January 9th at 11:00',
-      reminder: true,
-    },
+      text: 'This is an example task.',
+      day: 'Click the bin to delete it, or the check to mark as done.',
+      done: false,
+    }
   ])
 
   // Add Task
@@ -38,9 +26,9 @@ const App = () => {
     setTasks(tasks.filter((task) => task.id !== id ))
   }
 
-  // Toggle Reminder
-  const toggleReminder = (id) => {
-    setTasks(tasks.map((task) => task.id ===id ? { ...task, reminder : !task.reminder } : task))
+  // Toggle done
+  const toggleDone = (id) => {
+    setTasks(tasks.map((task) => task.id ===id ? { ...task, done : !task.done } : task))
   }
 
   return (
@@ -49,9 +37,9 @@ const App = () => {
       showAdd={showAddTask}/>
       {showAddTask && <AddTask onAdd={addTask}/> }
       {tasks.length > 0 ? (
-      <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />
+      <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleDone} />
       ) : (
-        "What do you need to do?"
+        "No tasks to display."
       )}
     </div>
   );
