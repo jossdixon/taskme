@@ -8,13 +8,11 @@
 
 body {
   font-family: 'M PLUS Rounded 1c', sans-serif;
-  background: rgb(56,145,166);
-  background: linear-gradient(90deg, rgba(56,145,166,1) 0%, rgba(227,101,91,1) 31%, rgba(219,84,97,1) 69%, rgba(253,231,76,1) 100%);
-  color:#4C5B5C;
+  background-image: url('/Users/Joss/code/jossdixon/taskme/taskme/public/gradientloop_1.gif');
+  background-size: cover;
   height: 100vh;
   padding:0;
   margin:0;
-  background-color: #82A6B1;
 }
 
 body h1 {
