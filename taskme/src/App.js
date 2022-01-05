@@ -2,8 +2,10 @@ import { useState } from 'react'
 import Header from './components/Header'
 import Tasks from './components/Tasks'
 import AddTask from './components/AddTask'
+import gradientloop from './gradientloop_1'
 
 const App = () => {
+  console.log(gradientloop)
   const [showAddTask, setShowAddTask] = useState(false)
   const [tasks, setTasks] = useState([
     {
