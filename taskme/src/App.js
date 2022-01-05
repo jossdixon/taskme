@@ -2,9 +2,6 @@ import { useState } from 'react'
 import Header from './components/Header'
 import Tasks from './components/Tasks'
 import AddTask from './components/AddTask'
-import gradientloop from './gradientloop_1.gif'
-
-console.log(gradientloop);
 
 const App = () => {
   const [showAddTask, setShowAddTask] = useState(false)
