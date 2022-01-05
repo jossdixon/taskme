@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Header from './components/Header'
 import Tasks from './components/Tasks'
 import AddTask from './components/AddTask'
-import gradientloop from './gradientloop_1.gif'
+import gradientloop from './gradientloop.gif'
 
 console.log(gradientloop);
 
